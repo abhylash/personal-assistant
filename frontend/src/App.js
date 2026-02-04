@@ -1,0 +1,20 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ChatPage from './pages/ChatPage';
+import KnowledgePage from './pages/KnowledgePage';
+import './index.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Routes>
+          <Route path="/" element={<ChatPage />} />
+          <Route path="/knowledge" element={<KnowledgePage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
